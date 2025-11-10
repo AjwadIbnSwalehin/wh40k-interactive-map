@@ -1,0 +1,27 @@
+body {
+  background-color: black; /* Ensure base color */
+}
+
+.star {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.terra-image {
+    width: 50px; /* Width of the specific part of the sprite */
+    height: 50px; /* Height of the specific part of the sprite */
+    background-image: url('./assets/Terra.png');
+    background-position: -100px -50px; /* Position of the specific sprite */
+    background-repeat: no-repeat;
+    margin: 0 auto; /* Centers the element horizontally */
+}
+
+/* To center the container where you place the sprite, use flexbox */
+.terra-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}

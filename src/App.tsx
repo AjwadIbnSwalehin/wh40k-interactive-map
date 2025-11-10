@@ -1,33 +1,33 @@
-import PlanetsGroup from "./components/PlanetsGroup";
+import React from "react";
+import "./App.css"; // Ensure this import exists for component styles
+import Terra from "./components/Terra.tsx";
 
-function TemplateMain() {
-  return (
-    <div className="w-full flex">
-      <div className="bg-blue-500">template</div>
-    </div>
-  );
-}
+const generateStars = (numStars: number) => {
+  const stars = [];
+  for (let i = 0; i < numStars; i++) {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    stars.push(
+      <div
+        key={i}
+        className="star"
+        style={{ left: `${x}px`, top: `${y}px`, position: "absolute" }}
+      />
+    );
+  }
+  return stars;
+};
 
 function App() {
-  let planets = [
-    "Isstvan III",
-    "Davin",
-    "Olympia",
-    "Segmentum Ultima",
-    "Tarsus",
-    "Arigatta",
-    "Prospero",
-    "Mars",
-    "Isstvan V",
-    "Tallarn",
-    "Belt of Iron",
-    "Pluto",
-    "Terra",
-  ];
+  const stars = generateStars(150);
   return (
     <>
-      <div>
-        <PlanetsGroup planets={planets} heading="Planets"></PlanetsGroup>
+      <div
+        className="star-container"
+        style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+      >
+        <Terra></Terra>
+        {stars}
       </div>
     </>
   );
