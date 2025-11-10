@@ -1,5 +1,13 @@
 import PlanetsGroup from "./components/PlanetsGroup";
 
+function TemplateMain() {
+  return (
+    <div className="w-full flex">
+      <div className="bg-blue-500">template</div>
+    </div>
+  );
+}
+
 function App() {
   let planets = [
     "Isstvan III",
@@ -17,9 +25,11 @@ function App() {
     "Terra",
   ];
   return (
-    <div>
-      <PlanetsGroup planets={planets} heading="Planets"></PlanetsGroup>
-    </div>
+    <>
+      <div>
+        <PlanetsGroup planets={planets} heading="Planets"></PlanetsGroup>
+      </div>
+    </>
   );
 }
 
