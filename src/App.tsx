@@ -24,9 +24,16 @@ function App() {
     <>
       <div
         className="star-container"
-        style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+        style={{
+          position: "relative",
+          minHeight: "100vh",
+          overflow: "hidden",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
       >
-        <Terra></Terra>
+        <Terra />
         {stars}
       </div>
     </>
