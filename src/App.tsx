@@ -1,6 +1,13 @@
 import React from "react";
-import "./App.css"; // Ensure this import exists for component styles
-import Terra from "./components/Terra.tsx";
+import "./App.css";
+import Planet from "./components/Planet";
+import terraImg from "./assets/Terra.png";
+import marsImg from "./assets/Mars.png";
+
+const planets = [
+  { name: "Terra", image: terraImg, x: 500, y: 300 },
+  { name: "Mars", image: marsImg, x: 800, y: 150 },
+];
 
 const generateStars = (numStars: number) => {
   const stars = [];
@@ -20,23 +27,23 @@ const generateStars = (numStars: number) => {
 
 function App() {
   const stars = generateStars(150);
+
   return (
-    <>
-      <div
-        className="star-container"
-        style={{
-          position: "relative",
-          minHeight: "100vh",
-          overflow: "hidden",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Terra />
-        {stars}
-      </div>
-    </>
+    <div
+      className="star-container"
+      style={{ position: "relative", minHeight: "100vh", overflow: "hidden" }}
+    >
+      {stars}
+      {planets.map((planet) => (
+        <Planet
+          key={planet.name}
+          name={planet.name}
+          image={planet.image}
+          x={planet.x}
+          y={planet.y}
+        />
+      ))}
+    </div>
   );
 }
 
