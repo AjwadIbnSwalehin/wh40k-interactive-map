@@ -1,4 +1,4 @@
-# React Starfield with Centered Sprite
+# React 40k Starfield with Planets
 
 This project renders a react application displaying a starfield of the major planets involved in the Horus Heresy, which takes place 10,000 years before the events of Warhammer 40k.
 
