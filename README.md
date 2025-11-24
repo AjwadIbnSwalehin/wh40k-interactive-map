@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# React Starfield with Centered Sprite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project renders a react application displaying a starfield of the major planets involved in the Horus Heresy, which takes place 10,000 years before the events of Warhammer 40k.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+/project-root
+│
+├── src/ # Source files and primary directories
+│ ├── assets/ # Images and media assets
+│ │ ├── Davin.png
+│ │ ├── Isstvan_III.png
+│ │ ├── Isstvan_V.png
+│ │ ├── Mars.png
+│ │ └── Terra.png
+│ │
+│ ├── components/ # React components
+│ │ └── Planet.tsx # Component for rendering planet
+│ │
+│ ├── layout/ # Layout components
+│ │ ├── usePlanets.ts # Component for all planets
+│ │ └── useStars.tsx # Component for randomly generating stars
+│ │
+│ ├── App.css # Global styles for the application
+│ ├── App.tsx # Main application component
+│ ├── main.tsx # Application entry point
+│ │
+│ ├── .gitignore
+│ ├── eslint.config.js
+│ ├── index.html
+│ ├── package-lock.json
+├── README.md # Project documentation
+│ ├── package.json
+│ ├── tsconfig.app.json
+│ ├── tsconfig.json
+│ ├── tsconfig.node.json
+│ └── vite.config.ts
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+Ensure you have [Node.js](https://nodejs.org/) and npm (Node Package Manager) installed on your system.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the Repository:**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+   ```
+   git clone https://github.com/AjwadIbnSwalehin/wh40k-interactive-map.git
+   cd wh40k-interactive-map
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Install Dependencies:
+
+Navigate into your project directory and run:
+
+```
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Running the Application
+To start the development server and view your app in the browser, run:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+npm start
+```
+
+This will start the React development server. Open http://localhost:3000 in your browser to view the result.
+
+Project Files
+App.tsx: Main application file which generates the stars and planets.
+Planet.tsx: Styles the planets
+usePlanets.ts: Contains list of all planets
+useStars.tsx: Randomises generation of stars
+App.css: Styles the background and containers for the stars and planets.
+Customization
+Adjust the sprite image settings (width, height, background-position) in SpriteImage.css.
+The starfield is generated in App.tsx through a function that creates star divs with random positioning.
