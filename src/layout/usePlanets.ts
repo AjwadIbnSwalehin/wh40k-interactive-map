@@ -11,7 +11,7 @@ const usePlanets = () => {
   { name: "Mars", image: marsImg, x: 750, y: 250 },
   { name: "Isstvan III", image: isstvaniiiImg, x: 1400, y: 100 },
   { name: "Isstvan V", image: isstvanvImg, x: 1300, y: 100 },
-  { name: "Davin", image: davinImg, x: 1, y: 1 },
+  { name: "Davin", image: davinImg, x: 1000, y: 350 },
 ];
 
   return planets;
