@@ -14,8 +14,8 @@ const usePlanets = () => {
   { name: "Isstvan III", image: isstvaniiiImg, x: 1400, y: 100 },
   { name: "Isstvan V", image: isstvanvImg, x: 1300, y: 100 },
   { name: "Davin", image: davinImg, x: 900, y: 350 },
-  { name: "Olympia", image: davinImg, x: 1050, y: 350 },
-  { name: "Prospero", image: davinImg, x: 400, y: 200 },
+  { name: "Olympia", image: olympiaImg, x: 1050, y: 350 },
+  { name: "Prospero", image: prosperoImg, x: 400, y: 200 },
 ];
 
   return planets;
