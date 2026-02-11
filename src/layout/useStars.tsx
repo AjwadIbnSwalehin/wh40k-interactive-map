@@ -1,5 +1,3 @@
-import React, { useMemo } from "react";
-
 function useStars(numStars: number) {
   const stars = [];
   for (let i = 0; i < numStars; i++) {
@@ -10,7 +8,7 @@ function useStars(numStars: number) {
         key={i}
         className="star"
         style={{ left: `${x}px`, top: `${y}px`, position: "absolute" }}
-      />
+      />,
     );
   }
   return stars;
