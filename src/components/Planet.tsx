@@ -7,9 +7,18 @@ type PlanetProps = {
   y: number;
   showInfo: boolean;
   onClick: () => void;
+  description: string;
 };
 
-const Planet = ({ name, image, x, y, showInfo, onClick }: PlanetProps) => {
+const Planet = ({
+  name,
+  image,
+  x,
+  y,
+  showInfo,
+  onClick,
+  description,
+}: PlanetProps) => {
   const infoBoxStyle = useCallback((): React.CSSProperties => {
     const infoBoxWidth = 200;
     const infoBoxHeight = 80;
@@ -56,7 +65,7 @@ const Planet = ({ name, image, x, y, showInfo, onClick }: PlanetProps) => {
       {showInfo && (
         <div style={infoBoxStyle()}>
           <strong>{name}</strong>
-          <p>Details about {name} go here...</p>
+          <p>{description}</p>
         </div>
       )}
     </>
