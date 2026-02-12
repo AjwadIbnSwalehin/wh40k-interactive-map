@@ -15,7 +15,7 @@ const usePlanets = () => {
   { name: "Isstvan V", image: isstvanvImg, x: 1300, y: 100, description: "Planet of the Dropsite Massacre." },
   { name: "Davin", image: davinImg, x: 900, y: 350, description: "The planet on which Horus made his traitorous pact with the Ruinous Powers of Chaos." },
   { name: "Olympia", image: olympiaImg, x: 1050, y: 350, description: "Due to Imperial changes, the people of the homeworld of the Iron Warriors rebelled. In humuliation, Perturabo, the Primarch of the Astartes Chapter killed 5 million Olympians as they refused to back down in their rebellion. Believing that his father would never forgive him for his act, he joined Horus' treachery against the Imperium." },
-  { name: "Prospero", image: prosperoImg, x: 400, y: 200, description: "The Burning of Prospero." },
+  { name: "Prospero", image: prosperoImg, x: 400, y: 200, description: "The Emperor had ordered Magnus The Red, the Primarch of the Thousand Sons to be captured after his violation of the edicts against psychic powers and sorcery made at the Council of Nikea. Horus Lupercal intercepted the message meant for the Space Wolves' Primarch, Leman Russ, and convinced him that he was supposed to destroy the planet instead. This led to the Burning of Prospero." },
 ];
 
   return planets;
