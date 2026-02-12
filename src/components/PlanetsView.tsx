@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Planet from "./Planet";
 import useStars from "../layout/useStars";
 import usePlanets from "../layout/usePlanets";
